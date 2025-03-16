@@ -9,7 +9,7 @@ while(1):
         line = ser.readline()   # read a '\n' terminated line
         line_decoded = line.decode('utf-8')
 
-        L = [x for x in line_decoded.split(', ')]
+        L = [float(x) for x in line_decoded.split(', ')]
         print("\nThe values are", L) 
         with open('event.csv', 'a') as f_object:
             writer_object = writer(f_object)
